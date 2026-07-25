@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+{% if user.is_authenticated %}
+
+<h3>Welcome, {{ user.username }}!</h3>
+
+{% else %}
+
+<h3>Welcome Guest!</h3>
+
+{% endif %}
 
 <div class="container">
 
